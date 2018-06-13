@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_header" />
+
+    <ScrollView
+        style="@style/View.MatchParent"
+        android:background="@drawable/bg_images" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:id="@+id/spSupportType"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:entries="@array/supportType"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+            
+            <com.lhn.watchandlearn.ui.widget.FormEditText
+                android:id="@+id/tvSupportDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_edit_text"
+                android:minLines="5"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                fs:hint="@string/support_detail"
+                fs:required="true"
+                fs:textColor="@color/edit_text_color"
+                fs:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_btn_main"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/support_submit"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

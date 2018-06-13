@@ -1,0 +1,16 @@
+<!--<h4 ng-switch on="isLogin">-->
+    <!--<a ng-switch-when="true" href="#/movies/{{movie._id}}">Title: {{movie.title}}</a>-->
+    <!--<a ng-switch-default href="javascript:;" ng-click="requireLoginAlert()">Title: {{movie.title}}</a>-->
+<!--</h4>-->
+<!--<p>Description: {{movie.description}}</p>-->
+<!--<p>Thumnail: {{movie.thumbnail}}</p>-->
+<div>
+    <p><a ui-sref="movie({id: movie._id, sid: 1})"><img ng-src="{{movie.thumbnail}}" width="100%" height="172" /></a></p>
+    <h4><a ui-sref="movie({id: movie._id, sid: 1})">{{movie.title}}</a></h4>
+    <div class="movie_status">
+        <span>{{movie.total_watched}} <i class="glyphicon glyphicon-eye-open"></i></span>
+        <span>{{movie.total_liked}} <i class="glyphicon glyphicon-thumbs-up"></i></span>
+        <span>{{movie.total_comments}} <i class="glyphicon glyphicon-comment"></i></span>
+    </div>
+</div>
+

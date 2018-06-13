@@ -1,0 +1,10 @@
+{
+  "name": "MeetUp",
+  "version": "1.0.0",
+  "description": "Meet Up",
+  "dependencies": {
+    "basic-auth": "^1.0.3",
+    "express": "^4.13.3"
+  },
+  "author": "Saritasa, Inc"
+}

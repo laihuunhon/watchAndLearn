@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fs="http://schemas.android.com/apk/res-auto"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    style="@style/View.MatchParent"
+    android:background="@drawable/bg_images" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            style="@style/View.MatchParent.Width"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:text="@string/login"
+            android:textColor="@color/normal_text_color"
+            android:textSize="40sp" />
+
+        <!--<com.facebook.login.widget.LoginButton-->
+            <!--android:id="@+id/fb_login_button"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:layout_marginBottom="30dp"-->
+            <!--android:visibility="gone" />-->
+
+        <Button
+            android:id="@+id/btnDummyLoginFB"
+            style="@style/View.MatchParent.Width"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_btn_fb"
+            android:drawableStart="@drawable/com_facebook_button_icon"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/loginWithFB"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/View.MatchParent.Width"
+            android:gravity="center_horizontal"
+            android:text="@string/enterInfo"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <com.lhn.watchandlearn.ui.widget.FormEditText
+            android:id="@+id/edtEmail"
+            style="@style/View.MatchParent.Width"
+            android:layout_marginTop="20dp"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            fs:hint="@string/email"
+            fs:spaceForRequiredIcon="false"
+            fs:textColor="@color/hint_color"
+            fs:textSize="16sp" />
+
+        <com.lhn.watchandlearn.ui.widget.FormEditText
+            android:id="@+id/edtPassword"
+            style="@style/View.MatchParent.Width"
+            android:layout_marginTop="10dp"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            fs:hint="@string/password"
+            fs:spaceForRequiredIcon="false"
+            fs:textColor="@color/hint_color"
+            fs:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            style="@style/View.MatchParent.Width"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="end"
+            android:height="30dp"
+            android:text="@string/reset_password"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/View.MatchParent.Width"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_btn_main"
+            android:text="@string/login"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/View.MatchParent.Width"
+            android:background="@drawable/bg_btn_default"
+            android:text="@string/register"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</ScrollView>

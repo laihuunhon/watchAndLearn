@@ -1,0 +1,101 @@
+<section>
+    <div>
+        <tabset>
+            <tab heading="New Movies" select="setPaging('newest')">
+                <div class="movieContainer">
+                    <div ng-repeat="movie in newest" class="col-md-3">
+                        <ng-include src="'partials/movieTemplate.html'"></ng-include>
+                    </div>
+                </div>
+            </tab>
+            <tab heading="Most Watched" select="setPaging('mostWatched')">
+                <div class="movieContainer">
+                    <div ng-repeat="movie in mostWatched" class="col-md-3">
+                        <ng-include src="'partials/movieTemplate.html'"></ng-include>
+                    </div>
+                </div>
+            </tab>
+            <tab heading="Most Liked" select="setPaging('mostLiked')">
+                <div class="movieContainer">
+                    <div ng-repeat="movie in mostLiked" class="col-md-3">
+                        <ng-include src="'partials/movieTemplate.html'"></ng-include>
+                    </div>
+                </div>
+            </tab>
+            <tab heading="Most Commented" select="setPaging('mostComments')">
+                <div class="movieContainer">
+                    <div ng-repeat="movie in mostComments" class="col-md-3">
+                        <ng-include src="'partials/movieTemplate.html'"></ng-include>
+                    </div>
+                </div>
+            </tab>
+        </tabset>
+        <paging
+                class="small"
+                page="currentPage"
+                page-size="pageSize"
+                total="total"
+                adjacent="1"
+                hide-if-empty="true"
+                ul-class="pagination"
+                active-class="active"
+                disabled-class="disabled"
+                show-prev-next="false"
+                paging-action="getMovie(page, 'newest')">
+        </paging>
+        <!--&lt;!&ndash; Nav tabs &ndash;&gt;-->
+        <!--<ul class="nav nav-tabs" role="tablist">-->
+            <!--<li role="presentation" class="active"><a href="#newest" aria-controls="home" role="tab" data-toggle="tab">New Movies</a></li>-->
+            <!--<li role="presentation"><a href="#mostWatched" aria-controls="mostWatched" role="tab" data-toggle="tab">Most Watched</a></li>-->
+            <!--<li role="presentation"><a href="#mostLiked" aria-controls="mostLiked" role="tab" data-toggle="tab">Most Liked</a></li>-->
+            <!--<li role="presentation"><a href="#mostCommented" aria-controls="mostCommented" role="tab" data-toggle="tab">Most Comments</a></li>-->
+        <!--</ul>-->
+
+        <!--&lt;!&ndash; Tab panes &ndash;&gt;-->
+        <!--<div class="tab-content">-->
+            <!--<div role="tabpanel" class="tab-pane fade in active" id="newest">-->
+                <!--<ul class="container">-->
+                    <!--<li ng-repeat="movie in newestMovies" class="col-md-2">-->
+                        <!--<ng-include src="'partials/movieTemplate.html'"></ng-include>-->
+                    <!--</li>-->
+                    <!--<li ng-repeat="movie in newestMovies" class="col-md-2">-->
+                        <!--<ng-include src="'partials/movieTemplate.html'"></ng-include>-->
+                    <!--</li>-->
+                    <!--<li ng-repeat="movie in newestMovies" class="col-md-2">-->
+                        <!--<ng-include src="'partials/movieTemplate.html'"></ng-include>-->
+                    <!--</li>-->
+                    <!--<li ng-repeat="movie in newestMovies" class="col-md-2">-->
+                        <!--<ng-include src="'partials/movieTemplate.html'"></ng-include>-->
+                    <!--</li>-->
+                    <!--<li ng-repeat="movie in newestMovies" class="col-md-2">-->
+                        <!--<ng-include src="'partials/movieTemplate.html'"></ng-include>-->
+                    <!--</li>-->
+                    <!--<li ng-repeat="movie in newestMovies" class="col-md-2">-->
+                        <!--<ng-include src="'partials/movieTemplate.html'"></ng-include>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div role="tabpanel" class="tab-pane fade" id="mostWatched">-->
+                <!--<ul class="container">-->
+                    <!--<li ng-repeat="movie in mostWatchedMovies" class="col-md-2">-->
+                        <!--<ng-include src="'partials/movieTemplate.html'"></ng-include>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div role="tabpanel" class="tab-pane fade" id="mostLiked">-->
+                <!--<ul class="container">-->
+                    <!--<li ng-repeat="movie in mostLikedMovies" class="col-md-2">-->
+                        <!--<ng-include src="'partials/movieTemplate.html'"></ng-include>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div role="tabpanel" class="tab-pane fade" id="mostCommented">-->
+                <!--<ul class="container">-->
+                    <!--<li ng-repeat="movie in mostCommentsMovies" class="col-md-2">-->
+                        <!--<ng-include src="'partials/movieTemplate.html'"></ng-include>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</section>

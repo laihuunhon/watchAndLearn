@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="cardType">
+	    <item>MobiPhone</item>
+	    <item>VinaPhone</item>
+	    <item>Viettel</item>
+    </string-array>
+    <string-array name="supportType">
+	    <item>Issue with movie, subtitle</item>
+	    <item>Issue with card</item>
+	    <item>Movie request</item>
+	    <item>Other request</item>
+    </string-array>
+</resources>

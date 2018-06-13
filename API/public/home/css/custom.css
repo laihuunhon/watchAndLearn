@@ -1,0 +1,256 @@
+body, .btn {
+    font-family: 'Arial' !important;
+}
+    .navbar-header a {
+        background: url('../images/logo.png') no-repeat left top;
+        width: 450px;
+        height: 121px;
+        text-indent: -1000em;
+        display: block;
+    }
+
+    .movieContainer {
+        margin: 20px 0;
+        overflow : hidden;
+    }
+        .movieContainer h4 {
+            font-size: 12px;
+            font-weight: bold;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .movie_status {
+            display : flex;
+        }
+            .movie_status span {
+                flex: 1;
+            }
+    .videoItemList {
+        overflow: hidden;
+    }
+        .videoItemList div {
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+video::-webkit-media-controls {
+    display:none !important;
+}
+
+
+
+/*** VIDEO CONTROLS CSS ***/
+/* control holder */
+#videoWrapper .control {
+    background:#333;
+    color:#ccc;
+    width:100%;
+    z-index:5;
+    display:block;
+    height: 45px;
+}
+/* control top part */
+#videoWrapper .topControl{
+    height:11px;
+    border-bottom:1px solid #404040;
+    padding:1px 5px;
+    background:#1F1F1F; /* fallback */
+    background:-moz-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+    background:-webkit-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+    background:-o-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+}
+/* control bottom part */
+#videoWrapper .btmControl{
+    clear:both;
+    background: #1F1F1F; /* fallback */
+    background:-moz-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+    background:-webkit-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+    background:-o-linear-gradient(top,#242424 50%,#1F1F1F 50%,#171717 100%);
+}
+#videoWrapper .control div.btnn {
+    float:left;
+    width:34px;
+    height:30px;
+    padding:0 5px;
+    border-right:1px solid #404040;
+    cursor:pointer;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+#videoWrapper .control div.text{
+    font-size:12px;
+    font-weight:bold;
+    line-height:30px;
+    text-align:center;
+    font-family:verdana;
+    width:20px;
+    border:none;
+    color:#777;
+}
+#videoWrapper .control div.btnPlay{
+    background:url(../images/control.png) no-repeat 0 0;
+    border-left:1px solid #404040;
+}
+#videoWrapper .control div.paused{
+    background:url(../images/control.png) no-repeat 0 -30px;
+}
+#videoWrapper .control div.btnStop{
+    background:url(../images/control.png) no-repeat 0 -60px;
+}
+#videoWrapper .control div.spdText{
+    border:none;
+    font-size:14px;
+    line-height:30px;
+    font-style:italic;
+}
+#videoWrapper .control div.selected{
+    font-size:15px;
+    color:#ccc;
+}
+#videoWrapper .control div.sound{
+    background:url(../images/control.png) no-repeat -88px -30px;
+    border:none;
+    float:right;
+}
+#videoWrapper .control div.sound2{
+    background:url(../images/control.png) no-repeat -88px -60px !important;
+}
+#videoWrapper .control div.muted{
+    background:url(../images/control.png) no-repeat -88px 0 !important;
+}
+#videoWrapper .control div.btnFS{
+    background:url(../images/control.png) no-repeat -44px 0;
+    float:right;
+}
+#videoWrapper .control div.btnLight{
+    background:url(../images/control.png) no-repeat -44px -60px;
+    border-left:1px solid #404040;
+    float:right;
+}
+#videoWrapper .control div.lighton{
+    background:url(../images/control.png) no-repeat -44px -30px !important;
+}
+
+/* PROGRESS BAR CSS */
+/* Progress bar */
+#videoWrapper .progress {
+    width:85%;
+    height:10px;
+    position:relative;
+    float:left;
+    cursor:pointer;
+    background: #444; /* fallback */
+    background:-moz-linear-gradient(top,#666,#333);
+    background:-webkit-linear-gradient(top,#666,#333);
+    background:-o-linear-gradient(top,#666,#333);
+    box-shadow:0 2px 3px #333 inset;
+    -moz-box-shadow:0 2px 3px #333 inset;
+    -webkit-box-shadow:0 2px 3px #333 inset;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    margin: 0;
+}
+#videoWrapper .progress span {
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+#videoWrapper .timeBar{
+    z-index:10;
+    width:0;
+    background: #3FB7FC; /* fallback */
+    background:-moz-linear-gradient(top,#A0DCFF 50%,#3FB7FC 50%,#16A9FF 100%);
+    background:-webkit-linear-gradient(top,#A0DCFF 50%,#3FB7FC 50%,#16A9FF 100%);
+    background:-o-linear-gradient(top,#A0DCFF 50%,#3FB7FC 50%,#16A9FF 100%);
+    box-shadow:0 0 1px #fff;
+    -moz-box-shadow:0 0 1px #fff;
+    -webkit-box-shadow:0 0 1px #fff;
+}
+#videoWrapper .bufferBar{
+    z-index:5;
+    width:0;
+    background: #777;
+    background:-moz-linear-gradient(top,#999,#666);
+    background:-webkit-linear-gradient(top,#999,#666);
+    background:-o-linear-gradient(top,#999,#666);
+    box-shadow:2px 0 5px #333;
+    -moz-box-shadow:2px 0 5px #333;
+    -webkit-box-shadow:2px 0 5px #333;
+}
+/* time and duration */
+#videoWrapper .time{
+    width:15%;
+    float:right;
+    text-align:center;
+    font-size:11px;
+    line-height:12px;
+}
+
+/* VOLUME BAR CSS */
+/* volume bar */
+#videoWrapper .volume{
+    position:relative;
+    cursor:pointer;
+    width:70px;
+    height:10px;
+    float:right;
+    margin-top:10px;
+    margin-right:10px;
+}
+#videoWrapper .volumeBar{
+    display:block;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:#eee;
+    z-index:10;
+}
+#selectSubtitle {
+    float: right;
+    margin: 5px 10px 0 0;
+    color: #000;
+}
+#videoSubtitle.en > small {
+    display: none;
+}
+#videoSubtitle.vn > span {
+    display: none;
+}
+#subtitles-container > span {
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    padding: 8px 14px 8px 14px;
+}
+#subtitles-container.show-sub > span > .vi {
+    display: block;
+    font-size: 85%;
+    font-style: italic;
+}
+#subtitles-container > .active-cue {
+    background: #333 !important;
+    color: #FFF;
+}
+#videoSection {
+    position : relative;
+}
+#videoSubtitle {
+    position : absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 23px;
+    color: #FFF;
+    z-index: 2147483647;
+    text-align: center;
+}

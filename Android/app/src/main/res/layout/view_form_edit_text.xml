@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+        android:id="@+id/tvRequired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="*"
+        android:textColor="@color/required_field"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/tvFormValue"
+        style="@style/View.MatchParent.Width"
+        android:layout_width="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textCursorDrawable="@null" />
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        style="@style/View.WrapContent"
+        android:layout_gravity="center_vertical"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_red_close"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/btnCheckmark"
+        style="@style/View.WrapContent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="2dp"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_checkmark"
+        android:visibility="gone" />
+
+</merge>

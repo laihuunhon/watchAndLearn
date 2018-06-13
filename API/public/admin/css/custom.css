@@ -1,0 +1,78 @@
+body, .btn {
+    font-family: 'Arial' !important;
+}
+    .navbar-header a {
+        background: url('../images/logo.png') no-repeat left top;
+        width: 450px;
+        height: 121px;
+        text-indent: -1000em;
+        display: block;
+    }
+    .tableWithPaging {
+        margin: 20px;
+    }
+        .tableHeader {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+            #btnAddMovie {
+                margin-left: auto;
+
+            }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        height: 51px;
+        background-color: #973f50;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 17px;
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+        .menu li a {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none !important;
+            padding: 0 3px;
+            margin: 25px 25px 0 25px;
+            transition: color 0.3s, letter-spacing 0.3s;
+        }
+        .menu li a.active {
+            color: #FFF;
+        }
+    #movieEditHeader {
+        display: flex;
+    }
+        .buttons {
+            margin-left: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    #btn-addVideo {
+        margin-top: 20px;
+    }
+    textarea.description {
+        height: 200px;
+    }
+    .filter {
+        display: flex;
+        flex-direction: row;
+    }
+        .filter > div {
+            margin-right: 20px;
+        }
+.editVideos tr td p {
+    word-wrap: break-word;
+    width: 390px;
+}
+.addVideos tr td p {
+    word-wrap: break-word;
+    width: 800px;
+}

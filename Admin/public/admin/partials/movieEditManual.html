@@ -1,0 +1,60 @@
+<div class="container">
+    <section id="movieEditHeader">
+        <div class="buttons">
+            <a class="btn btn-default" ui-sref="^.list">Cancel</a>
+        </div>
+    </section>
+    <section class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Edit Manual Movie</h3>
+        </div>
+        <div class="panel-body">
+            <form>
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" ng-model="movie.title" />
+                </div>
+                <div class="form-group">
+                    <label>Category:</label>
+                    <label><input type="checkbox" name="category" ng-model="movie.category.ted" />Ted</label>
+                </div>
+                <div class="form-group">
+                    <label>Is Finished: <input type="checkbox" name="category" ng-model="movie.isFinished" /></label>
+                </div>
+                <div class="form-group">
+                    <label for="thumbnail">Thumbnail:</label>
+                    <input type="text" class="form-control" id="thumbnail" ng-model="movie.thumbnail" />
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" class="form-control" ng-model="movie.description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="srcUrl">Src URL:</label>
+                    <input type="text" class="form-control" id="srcUrl" ng-model="movie.srcUrl" />
+                </div>
+                <button type="submit" class="btn btn-primary pull-right" ng-click="updateMovie()">Update Movie</button>
+                <div class="form-group addVideos">
+                    <label>Videos:</label>
+                    <div class="videoList" ng-repeat="video in movie.videos">
+                        <div style="padding-top: 10px;">
+                            <input readonly type="text" placeholder="index" ng-model="video.index" style="display: block" />
+                            <input readonly style="display: block" type="text" placeholder="url" ng-model="video.url" />
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="videoList" style="padding-top: 10px;">
+                        <input type="text" placeholder="index" ng-model="newVideo.index" style="display: block" />
+                        <input style="display: block" type="text" placeholder="url" ng-model="newVideo.url" />
+                        <input style="display: block" type="text" placeholder="en sub" ng-model="newVideo.subtitles.english" />
+                        <input style="display: block" type="text" placeholder="vn sub" ng-model="newVideo.subtitles.vietnamese" />
+                        <button ng-click="updateVideo(newVideo.index)">Add or Update</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+
+

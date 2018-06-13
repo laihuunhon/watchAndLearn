@@ -1,0 +1,43 @@
+<div id="videoWrapper" class="col-md-8">
+    <div id="videoSection" style="width: 100%">
+        <video id="video" preload="none" style="width: 100%" ng-src="{{play_video.url}}">
+            <track id="enVtt" kind="subtitles" ng-src="{{play_video.enVtt}}" srclang="en" label="English" type="text/vtt" />
+        </video>
+        <p id="videoSubtitle" ng-class="videoSutitleState"></p>
+    </div>
+    <div class="control">
+        <div class="topControl">
+            <div class="progress">
+                <span class="bufferBar"></span>
+                <span class="timeBar"></span>
+            </div>
+            <div class="time">
+                <span class="current"></span> /
+                <span class="duration"></span>
+            </div>
+        </div>
+        <div class="btmControl">
+            <div class="btnPlay btnn" title="Play/Pause video"></div>
+            <div class="btnFS btnn" title="Switch to full screen"></div>
+            <div class="volume" title="Set volume">
+                <span class="volumeBar"></span>
+            </div>
+            <div class="sound sound2 btnn" title="Mute/Unmute sound"></div>
+            <select id="selectSubtitle">
+                <option value="0">None</option>
+                <option value="1">English</option>
+                <option value="2">Vietnamese</option>
+                <option value="3" selected>Both</option>
+            </select>
+        </div>
+    </div>
+    <div class="videoItemList">
+        <h4>{{movie.title}}</h4>
+        <div ng-repeat="video in movie.videos">
+            <a ui-sref="movie({id: movie._id, sid: video.index})" class="btn" ng-class="video.index == sid ? 'btn-primary': 'btn-default'">{{video.index}}</a>
+        </div>
+    </div>
+</div>
+<div id="subtitles-sidebar" class="col-md-4">
+    <div id="subtitles-container" class="show-sub" style="height: 400px; overflow-y: scroll;"></div>
+</div>

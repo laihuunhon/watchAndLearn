@@ -1,0 +1,76 @@
+<div class="tableWithPaging">
+    <div class="filter">
+        <div>
+            <label>Title: <input type="text" ng-model="filter.title" /></label>
+        </div>
+        <div>
+            <label>
+                Type:
+                <select ng-model="filter.series">
+                    <option value="0">All</option>
+                    <option value="1">Single</option>
+                    <option value="2">Series</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>
+                Finished:
+                <select ng-model="filter.isFinished">
+                    <option value="0">All</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <button type="button" ng-click="getMovie(1)">Filter</button>
+        </div>
+    </div>
+    <div class="tableHeader">
+        <paging
+                class="small"
+                page="currentPage"
+                page-size="pageSize"
+                total="total"
+                adjacent="1"
+                hide-if-empty="true"
+                ul-class="pagination"
+                active-class="active"
+                disabled-class="disabled"
+                show-prev-next="false"
+                paging-action="getMovie(page)">
+        </paging>
+        <a ui-sref="^.add" class="btn btn-primary" id="btnAddMovie">Add Movie</a>
+        <a ui-sref="^.addManual" class="btn btn-primary" id="btnAddManualMovie">Add Manual Movie</a>
+    </div>
+    <table width="100%" class="table">
+        <thead>
+        <tr>
+            <th width="20%">Title</th>
+            <th>Description</th>
+            <th>Thumnail</th>
+            <th width="5%">Watched</th>
+            <th width="5%">Liked</th>
+            <th width="5%">Commented</th>
+            <th width="5%">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="movie in movieList">
+                <td>{{movie.title}}</td>
+                <td>{{movie.description}}</td>
+                <td><img ng-src="{{movie.thumbnail}}" width="100" height="100" /></td>
+                <td>{{movie.total_watched}}</td>
+                <td>{{movie.total_liked}}</td>
+                <td>{{movie.total_comments}}</td>
+                <td>
+                    <a ui-sref="^.edit({id: movie._id})">Edit</a><br />
+                    <a ui-sref="^.editManual({id: movie._id})">Edit Manual</a><br />
+                    <a ng-click="remove(movie._id)" style="cursor: pointer">Remove</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

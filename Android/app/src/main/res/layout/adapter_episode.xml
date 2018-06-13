@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_feed_item"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tvEpisode2"
+        style="@style/View.MatchParent.Width"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/View.MatchParent.Width"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="#27ae60" />
+
+    <LinearLayout
+        style="@style/View.MatchParent.Width"
+        android:layout_marginTop="4dp"
+        android:baselineAligned="false"
+        android:paddingTop="10dp"
+        android:weightSum="3" >
+
+        <TextView
+            android:id="@+id/tvWatchedCount"
+            style="@style/View.WrapContent"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/ic_watched"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/tvLikedCount"
+            style="@style/View.WrapContent"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/ic_like"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/tvCommentedCount"
+            style="@style/View.WrapContent"
+            android:layout_weight="1"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/ic_comment"
+            android:ellipsize="end"
+            android:maxLines="1" />
+    </LinearLayout>
+
+</LinearLayout>

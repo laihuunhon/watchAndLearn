@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<body>
+<center>
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border: 1px solid rgb(221, 221, 221); max-width: 800px; background-color: #e9e9e9">
+        <tbody>
+        <% include header.ejs %>
+        <tr>
+            <td valign="top" align="center">
+                <table width="90%" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: 20px 5%; padding: 20px; background-color: #FFF;">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div style="color:#000;font-family:Arial;font-size:15px;line-height:150%;text-align:left">
+                                <span style="color:#000;display:block;font-family:Arial;font-size:32px;font-weight:bold;line-height:100%;margin-bottom:10px;text-align:left">PHIND Deal Activated</span>
+                                Dear <%=name%>,
+                                <br /><br />
+                                Your deal has been activated on <%=activation_date%>:
+                                <br /><br />
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width='320'>
+                                            <table border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td width="50" style="border: 1px solid #CBCFD2; border-right: none; padding: 10px 0px 10px 10px;"><img src="<%=item_icon%>" width="40" /></td>
+                                                    <td width="200" style="border: 1px solid #CBCFD2; border-left: none; padding: 10px 10px 10px 0px;"><b><%=business_name%></b><br />
+                                                        <div style="white-space: normal;width: 175px;word-wrap: break-word;">
+                                                            <%=item_name%>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr height='10'>
+                                                    <td colspan='2'></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan='2' style="padding: 10px; border: 1px solid #CBCFD2;"  width="275"><div style="white-space: normal;width: 275px;word-wrap: break-word;"><%=item_description%></div></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br /><br />
+                                Thank you for your use of PHIND! We are dedicated to providing you with excellent service and a great experience. If you have any questions, comments, or concerns, please contact us at <%=contact_email%>. We would love to hear from you!
+                                <br /><br />
+                                Explore the world around you!
+                                <br />
+                                Your PHIND Guide
+                                <br />
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <% include footer.ejs %>
+        </tbody>
+    </table>
+</center>
+</body>
+</html>

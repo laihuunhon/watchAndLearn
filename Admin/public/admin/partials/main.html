@@ -1,0 +1,10 @@
+<section ng-controller="MainCtrl">
+    <div ng-switch on="isLogin">
+        <ul ng-switch-when="true" class="menu">
+            <li><a ui-sref="movies" ui-sref-active="active">Movies</a></li>
+            <li><a ui-sref="users" ui-sref-active="active">Users</a></li>
+        </ul>
+    </div>
+</section>
+<div ui-view></div>
+

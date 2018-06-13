@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_header" />
+
+    <ScrollView
+        style="@style/View.MatchParent"
+        android:background="@drawable/bg_images" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:text="@string/extenddate_bycard"
+               	android:textStyle="bold"
+               	android:textAllCaps="true"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:text="@string/extenddate_note"
+               	android:textStyle="italic"
+                android:textColor="#FFF"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:id="@+id/spCardType"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/cardType"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <com.lhn.watchandlearn.ui.widget.FormEditText
+                android:id="@+id/tvCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_edit_text"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                fs:hint="@string/extenddate_number"
+                fs:required="true"
+                fs:textColor="@color/edit_text_color"
+                fs:textSize="15sp" />
+
+            <com.lhn.watchandlearn.ui.widget.FormEditText
+                android:id="@+id/tvCardSerial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_edit_text"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                fs:hint="@string/extenddate_serial"
+                fs:required="true"
+                fs:textColor="@color/edit_text_color"
+                fs:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_btn_main"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/extenddate"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

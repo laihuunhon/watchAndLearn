@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- GENERAL -->
+    <string name="app_name">PhimCuaTui</string>	
+    <string name="action_settings">Settings</string>
+    <string name="error">Error</string>
+    <string name="fail_to_initialize_the_app">Failed to initialize the app</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="exitApp">Exit App</string>
+    <string name="exitAppTitle">Are you sure you want to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="invalidToken">Authentication failed or Your account is logged in other device. Please re-login</string>
+    <string name="notice">Notice</string>
+    <string name="newUpdate">PhimCuaTui has new version. Please update it.</string>
+    
+	<!-- LOADING -->
+	<string name="loading_waiting">Please wait</string>
+	<!-- INVALID -->
+	<string name="invalid_email">Please enter valid email</string>
+    <string name="invalid_password">Please enter password</string>
+    <string name="invalid_retype_password">Password do not match</string>
+    <string name="invalid_phone">Please enter phone number</string>
+    <string name="invalid_field">Please fill in this field</string>
+	<!-- LOGIN -->
+	<string name="login">Login</string>
+    <string name="loginWithFB">Login with Facebook</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="reset_password"><u>Reset password</u></string>
+    <string name="register">Register</string>
+    <string name="enterInfo">or enter in your account info</string>
+    <!-- REGISTER -->
+    <string name="retype_password">re-type password</string>
+    <string name="phone">phone number</string>
+    <string name="register_instruction">Please register with real email and phone number to able to retrieve lost account.</string>
+    <!-- FORGOT PASSWORD -->
+    <string name="password_recovery">Password Recovery</string>
+    <string name="forgot_password_instruction">Please enter your registered email and phone number. A new password will be sent to your email box. You can use this password to login and change it later at profile page.</string>
+    <string name="send_reset_password_success">New password has been successfully sent to your email.</string>
+    <!-- HOME -->
+    <string name="tab_movie_new">NEW MOVIES</string>
+    <string name="tab_movie_single">MOVIES</string>
+    <string name="tab_movie_series">SERIES</string>
+    <string name="tab_movie_ted">TED</string>
+    <string name="profile">User Profile</string>
+    <string name="support">Support</string>
+    <string name="logout">Logout</string>
+    <string name="search_hint">Search</string>  
+    <string name="txt_account_expired">Your account has been expired, please extend it!</string>
+    <!-- PROFILE -->
+    <string name="profile_email">Email:</string>
+	<string name="profile_phone">Phone:</string>
+	<string name="profile_expiredate">Expired Date:</string>
+	<string name="profile_changepassword">Change Password</string>
+	<string name="profile_extenddate">Extend Date</string>
+	<!-- CHANGE PASSWORD -->
+	<string name="changepassword">Change Password</string>
+	<string name="changepassword_current">current password</string>
+	<string name="changepassword_new">new password</string>
+	<string name="changepassword_confirm">re-type new password</string>
+	<string name="changepassword_submit">Update password</string>
+	<string name="changepassword_success">Change password success!</string>
+	<!--  EXTEND DATE -->
+	<string name="extenddate">Extend Date</string>
+	<string name="extenddate_bycard">Extend by Mobile Card :</string>
+	<string name="extenddate_note">1000 VND = 1 day</string>
+	<string name="extenddate_number">Card Number</string>
+	<string name="extenddate_serial">Card Serial</string>
+	<string name="extenddate_success">Extend Date success! New expired date is: </string>
+	<!-- SUPPORT -->
+	<string name="support_detail">Detail information</string>
+	<string name="support_submit">Send</string>
+	<string name="support_success">Thank you for your information, we will contact you soon via email.</string>
+	<!-- VIDEO -->	
+	<string name="tab_info">INFORMATION</string>
+    <string name="tab_episode">EPISODE</string>
+    <string name="tab_comment">COMMENT</string> 
+	<string name="comment_hint">Comment (at least 30 characters)</string>
+	<string name="back">Back</string>
+	<string name="txt_video_error">Can not get video information or video was deleted. Please refresh the video list.</string>
+    <string name="txt_video_error2">Can not get video information at the moment. Please try again later.</string>
+</resources>

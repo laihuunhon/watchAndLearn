@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="normal_text_color">#eaeaea</color>
+    <color name="sub_text_color">#6f6f6f</color>
+    <color name="hint_color">#131313</color>
+    <color name="orange">#ff9e27</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="indicator_selected">#ff8120</color>
+    <color name="indicator_normal">#ffbf8f</color>
+    <color name="required_field">#ff7f20</color>
+    <color name="edit_text_color">#131313</color>
+    <color name="bg_button_header_pressed_color">#999999</color>
+    <color name="button_header_disabled_color">#444444</color>
+    <color name="button_header_normal_color">#808080</color>
+    <color name="dialog_subtitle_color">#6f6f6f</color>
+    <color name="list_view_divider">#DDDDDD</color>
+    <color name="league_item_pressed">#cecece</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#AA666666</color>
+    <color name="button_postpone_selected">#8f8f8f8f</color>
+	<color name="text_off">#b6b6b6</color>
+	<color name="injure_color">#ea4f52</color>
+	<color name="title_gray_color">#8e8e8e</color>
+	<color name="blue">#0000FF</color>
+	<color name="empty_text_color">#ffb91e</color>
+	<color name="slide_bg_color">#696868</color>
+	<color name="green">#AA4FB94A</color>
+	<color name="fb">#425D9E</color>
+
+    <!-- Help/Policy/term -->
+    <color name="bg_policy_color">#EFEFEF</color>
+    <color name="ColorPrimary">#00897B</color>
+    <color name="ColorPrimaryDark">#00695C</color>
+    <color name="tabsScrollColor">#004D40</color>
+</resources>

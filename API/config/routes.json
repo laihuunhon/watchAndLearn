@@ -1,0 +1,262 @@
+{
+    "IndexPage": {
+        "method": "get",
+        "url": "/:page",
+        "callback": "common.redirectToIndexPage"
+    },
+	"UserRegistration": {
+		"method": "post",
+		"url": "/api/v1/users",
+		"callback": "users.registration",
+		"required": [
+			["email", "password", "phone", "device_uuid"]
+		],
+		"matches": {
+			"email": "email"
+		}
+	},
+
+    "VerifyEmail": {
+        "method": "post",
+        "url": "/api/v1/users/verifyEmail",
+        "callback": "users.verifyEmail",
+        "required": [
+            ["email"]
+        ],
+        "matches": {
+            "email": "email"
+        }
+    },
+
+	"UserLogin": {
+		"method": "post",
+		"url": "/api/v1/users/login",
+		"callback": "users.login",
+		"required": [
+			["email", "password"]
+		]
+	},
+
+    "UserLogout": {
+        "auth": 1,
+        "method": "post",
+        "url": "/api/v1/users/logout",
+        "callback": "users.logout"
+    },
+
+    "ResetPassword": {
+        "method": "post",
+        "url": "/api/v1/users/resetpassword",
+        "callback": "users.resetpassword",
+        "required": [
+            ["email", "phone"]
+        ],
+        "matches": {
+            "email": "email"
+        }
+    },
+
+    "UserList": {
+        "auth": 1,
+        "role": ["admin"],
+        "method": "get",
+        "url": "/api/v1/users",
+        "callback": "users.list"
+    },
+
+    "GetUserProfile": {
+        "auth": 1,
+        "method": "get",
+        "url": "/api/v1/users/:user_id",
+        "callback": "users.getUserProfile"
+    },
+
+	"ChangePassword": {
+		"auth": 1,
+		"method": "put",
+		"url": "/api/v1/users/changePassword",
+		"callback": "users.changePassword",
+        "required": [
+            ["currentPassword", "newPassword"]
+        ]
+	},
+
+    "DeleteUser": {
+        "auth": 1,
+        "role": ["admin"],
+        "method": "del",
+        "url": "/api/v1/users/:user_id",
+        "callback": "users.deleteUser"
+    },
+
+    "AddComment": {
+        "auth": 1,
+        "method": "post",
+        "url": "/api/v1/comments",
+        "callback": "comments.add",
+        "required": [
+            ["video_id", "movie_id", "text"]
+        ]
+    },
+
+    "GetCommentList": {
+        "auth": 1,
+        "method": "get",
+        "url": "/api/v1/comments",
+        "callback": "comments.list",
+        "required": [
+            ["video_id"]
+        ]
+    },
+
+    "AddMovie": {
+        "auth": 1,
+        "role": ["admin"],
+        "method": "post",
+        "url": "/api/v1/movies",
+        "callback": "movies.add",
+        "required": [
+            ["title", "description", "thumbnail"]
+        ]
+    },
+
+    "UpdateMovie": {
+        "auth": 1,
+        "role": ["admin"],
+        "method": "put",
+        "url": "/api/v1/movies/:movie_id",
+        "callback": "movies.updateMovie"
+    },
+
+    "DeleteMovie": {
+        "auth": 1,
+        "role": ["admin"],
+        "method": "del",
+        "url": "/api/v1/movies/:movie_id",
+        "callback": "movies.deleteMovie"
+    },
+
+    "AddVideoToMovie": {
+        "auth": 1,
+        "role": ["admin"],
+        "method": "post",
+        "url": "/api/v1/movies/addVideo",
+        "callback": "movies.addVideoToMovie",
+        "required": [
+            ["videoIndex", "videoUrl", "movie_id"]
+        ]
+    },
+
+    "GetMovieList": {
+        "method": "get",
+        "url": "/api/v1/movies",
+        "callback": "movies.list",
+        "required": [
+            ["movie_type"]
+        ]
+    },
+
+    "SearchMovieList": {
+        "auth": 1,
+        "method": "get",
+        "url": "/api/v1/movies/search",
+        "callback": "movies.search",
+        "required": [
+            ["search_text"]
+        ]
+    },
+
+    "GetStorageFiles": {
+        "auth": 1,
+        "role": ["admin"],
+        "method": "get",
+        "url": "/api/v1/movies/storage",
+        "callback": "movies.getStorageList"
+    },
+
+    "GetMovie": {
+        "auth": 1,
+        "method": "get",
+        "url": "/api/v1/movies/:movie_id",
+        "callback": "movies.getMovieDetail"
+    },
+
+    "GetFile": {
+        "method": "get",
+        "url": "/api/v1/files/:filename",
+        "callback": "movies.getFile"
+    },
+
+    "GetUrlData": {
+        "method": "get",
+        "url": "/api/v1/url",
+        "required": [
+            ["url"]
+        ],
+        "callback": "movies.getUrlData"
+    },
+
+    "GetMovieListByAdmin": {
+        "auth": 1,
+        "role": ["admin"],
+        "method": "get",
+        "url": "/api/v1/backend/movies",
+        "callback": "movies.listByAdmin"
+    },
+
+    "AddLike": {
+        "auth": 1,
+        "method": "post",
+        "url": "/api/v1/likes",
+        "callback": "likes.add",
+        "required": [
+            ["video_id", "movie_id"]
+        ]
+    },
+
+    "AddWatched": {
+        "auth": 1,
+        "method": "post",
+        "url": "/api/v1/watched",
+        "callback": "movies.addWatch",
+        "required": [
+            ["video_id", "movie_id"]
+        ]
+    },
+
+    "AddTransaction": {
+        "auth": 1,
+        "method": "post",
+        "url": "/api/v1/transactions",
+        "callback": "transactions.add",
+        "required": [
+            ["card_id", "pin_field", "seri_field"]
+        ]
+    },
+
+    "CheckUserEndDate": {
+        "auth": 1,
+        "method": "get",
+        "url": "/api/v1/checkEndDate",
+        "callback": "users.checkEndDate"
+    },
+
+    "SendSupport": {
+        "auth": 1,
+        "method": "post",
+        "url": "/api/v1/support",
+        "callback": "users.support",
+        "required": [
+            ["support_type", "support_detail"]
+        ]
+    },
+
+    "UserLoginWithFB": {
+        "method": "post",
+        "url": "/api/v1/users/loginWithFB",
+        "callback": "users.loginWithFacebook",
+        "required": [
+            ["access_token"]
+        ]
+    }
+}

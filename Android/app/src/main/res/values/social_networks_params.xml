@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="facebook_app_id">1730953027137388</string>
+    <string-array name="facebook_scope">"publish_stream,offline_access,email"</string-array>
+    <string name="furry_app_id">NG7XM44297RYMM4JT324</string>
+</resources>

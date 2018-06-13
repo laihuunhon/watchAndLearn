@@ -1,0 +1,22 @@
+{
+    "production": {
+        "apiUrl": "http://128.199.164.220:5555/api/v1/",
+        "version": "2",
+        "androidVersion": "2",
+        "iosVersion": "2"
+    },
+
+    "staging": {
+        "apiUrl": "http://113.161.65.212:5555/api/v1/",
+        "version": "2",
+        "androidVersion": "2",
+        "iosVersion": "2"
+    },
+
+    "development": {
+        "apiUrl": "http://192.168.13.98:5555/api/v1/",
+        "version": "2",
+        "androidVersion": "2",
+        "iosVersion": "2"
+    }
+}

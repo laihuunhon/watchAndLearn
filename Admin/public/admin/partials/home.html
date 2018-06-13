@@ -1,0 +1,16 @@
+<section>
+    <form name="loginForm" novalidate class="col-md-2 col-md-offset-5">
+        <div class="form-group" ng-class="{'has-error': loginForm.signinEmail.$invalid && !loginForm.signinEmail.$pristine}">
+            <input value="" type="email" name="signinEmail" class="form-control" id="signinEmail" placeholder="Email" required ng-model="signinEmail" />
+            <span ng-show="loginForm.signinEmail.$error.required && !loginForm.signinEmail.$pristine" class="help-block">Email required</span>
+            <span ng-show="loginForm.signinEmail.$error.email" class="help-block">Please enter a valid email!</span>
+        </div>
+        <div class="form-group" ng-class="{'has-error': loginForm.signinPassword.$invalid && !loginForm.signinPassword.$pristine}">
+            <input value="" type="password" name="signinPassword" class="form-control" id="signinPassword" placeholder="Password" required ng-model="signinPassword" />
+            <span ng-show="loginForm.signinPassword.$error.required && !loginForm.signinPassword.$pristine" class="help-block">Password required</span>
+        </div>
+        <div>
+            <button class="btn btn-primary" ng-click="submit()" ng-disabled="loginForm.$invalid">Submit</button>
+        </div>
+    </form>
+</section>

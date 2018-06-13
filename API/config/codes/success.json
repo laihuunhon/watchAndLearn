@@ -1,0 +1,37 @@
+{
+	"SU00001":"Registration is completed successfully",
+	"SU00002":"Success logout",
+	"SU00003":"Reset password sent to user email",
+	"SU00004":"Password is updated successfully",
+	"SU00005":"User is found",
+	"SU00006":"User profile has been updated successfully",
+	"SU00007":"User has been deleted successfully",
+	"SU00008":"Get list user successfully",
+	"SU00009":"Submission received",
+	"SU00010":"Change user status successfully",
+    "SU00011":"You can use this username",
+    "SU00012":"You can use this email",
+    "SU00013":"Username sent to user email",
+    "SU00014":"A confirm update user profile email has been sent to user",
+  	"SU00015":"Check user end date success",
+  	"SU00016":"Contact us success",
+
+	"SC00001":"Get comments successfully",
+	"SC00002":"Add comment successfully",
+
+  	"SL00001":"Add like successfully",
+
+  	"SW00001":"Add watch successfully",
+
+    "SM00001":"Get movies successfully",
+    "SM00002":"Add movie successfully",
+    "SM00003":"Get storage file list successfully",
+    "SM00004":"Add video to movie successfully",
+    "SM00005":"Get movie detail successfully",
+    "SM00006":"Get movie detail successfully",
+    "SM00007":"Remove movie successfully",
+  	"SM00008":"Update movie successfully",
+
+
+    "ST00001":"Add card successfully"
+}

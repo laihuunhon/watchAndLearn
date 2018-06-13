@@ -1,0 +1,128 @@
+<!doctype html>
+<html ng-app="walApp">
+<head>
+    <style>
+        #subtitles-container > span {
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+            display: block;
+            padding: 8px 14px 8px 14px;
+        }
+        #subtitles-container.show-sub > span > .vi {
+            display: block;
+            font-size: 85%;
+            font-style: italic;
+        }
+        #subtitles-container > .active-cue {
+            background: #333 !important;
+            color: #FFF;
+        }
+        #videoSection {
+            position : relative;
+        }
+        #videoSubtitle {
+            position : absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 20px;
+            margin: 0;
+            padding: 0;
+            font-size: 23px;
+            color: #FFF;
+            z-index: 2147483647;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div>
+        <label>Enter URL:</label>
+        <input type="text" style="width: 500px" id="pageUrl" />
+        <button id="btn-go">Go</button>
+    </div>
+    <div style="overflow: hidden; width: 100%">
+        <div id="videoWrapper" style="width: 1000px; float: left">
+            <div id="videoSection" style="width: 100%">
+                <video id="video" preload="none" style="width: 100%">
+                    <source src="http://localhost:7878/api/v1/files/abc" type="video/mp4">
+                    <track id="enVtt" kind="subtitles" src="en.vtt" srclang="en" label="English" type="text/vtt" />
+                </video>
+                <p id="videoSubtitle"></p>
+            </div>
+            <div class="control">
+                <div class="topControl">
+                    <div class="progress">
+                        <span class="bufferBar"></span>
+                        <span class="timeBar"></span>
+                    </div>
+                    <div class="time">
+                        <span class="current"></span> /
+                        <span class="duration"></span>
+                    </div>
+                </div>
+                <div class="btmControl">
+                    <div class="btnPlay btn" title="Play/Pause video"></div>
+                    <div class="btnFS btn" title="Switch to full screen"></div>
+                    <div class="volume" title="Set volume">
+                        <span class="volumeBar"></span>
+                    </div>
+                    <div class="sound sound2 btn" title="Mute/Unmute sound"></div>
+                    <select id="selectSubtitle">
+                        <option value="0">None</option>
+                        <option value="1">English</option>
+                        <option value="2">Vietnamese</option>
+                        <option value="3" selected>Both</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="subtitles-sidebar" style="width: 600px; float: right;">
+            <div id="subtitles-container" class="show-sub" style="height: 400px; overflow-y: scroll;"></div>
+        </div>
+    </div>
+
+    <input type="hidden" id="en" src="en.srt" />
+    <input type="hidden" id="vi" src="vi.srt" />
+</body>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="track.js"></script>
+<script type="text/javascript" src="video.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#btn-go').click(function() {
+            $.ajax({
+                url: '/api/v1/url?url=' + $('#pageUrl').val(),
+                type: 'GET',
+                success: function(res) {
+                    var videoUrl = res.videoUrl;
+
+                    $('#video > source').attr('src', videoUrl);
+                    $('#video').load();
+                    initVideo();
+                    initTrack();
+                }
+            });
+        });
+
+        $('#selectSubtitle').bind('change', function() {
+            var value = this.value;
+            if (value == 0) {
+                $('#videoSubtitle').hide();
+            } else {
+                $('#videoSubtitle').show();
+                $('#videoSubtitle').removeAttr('class');
+
+                if (value == 1) {
+                    $('#videoSubtitle').addClass('en');
+                } else if (value == 2) {
+                    $('#videoSubtitle').addClass('vn');
+                }
+            }
+        });
+    });
+</script>
+</html>
+

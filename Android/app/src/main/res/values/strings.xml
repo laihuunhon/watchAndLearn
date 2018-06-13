@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- GENERAL -->
+    <string name="app_name">PhimCuaTui</string>	
+    <string name="action_settings">Settings</string>
+    <string name="error">Lỗi</string>
+    <string name="fail_to_initialize_the_app">Khởi động ứng dụng không thành công</string>  
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="exitApp">Thoát khỏi ứng dụng</string>
+    <string name="exitAppTitle">Bạn có muốn thoát khỏi ứng dụng?</string>
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
+    <string name="invalidToken">Xác thực không thành công hoặc Tài khoản của bạn đã đăng nhập ở nơi khác. Xin vui lòng đăng nhập lại.</string>
+    <string name="notice">Thông báo</string>
+    <string name="newUpdate">PhimCuaTui đã có phiên bản mới. Xin bạn vui lòng cập nhật.</string>
+	
+	<!-- LOADING -->
+	<string name="loading_waiting">Xin hãy đợi chút</string>
+	<!-- INVALID -->
+	<string name="invalid_email">Hãy nhập đúng định dạng email</string>
+    <string name="invalid_password">Hãy nhập mật khẩu</string>
+    <string name="invalid_retype_password">Mật khẩu không trùng nhau</string>
+    <string name="invalid_phone">Hãy nhập vào số điện thoại</string>
+    <string name="invalid_field">Hãy điền thông tin vào đây</string>
+	<!-- LOGIN -->
+	<string name="login">Đăng nhập</string>
+    <string name="loginWithFB">Đăng nhập với Facebook</string>
+    <string name="email">Email</string>
+    <string name="password">Mật khẩu</string>
+    <string name="reset_password"><u>Quên mật khẩu?</u></string>
+    <string name="register">Đăng ký</string>
+    <string name="enterInfo">hoặc nhập thông tin tài khoản</string>
+    <!-- REGISTER -->
+    <string name="retype_password">xác nhận mật khẩu</string>
+    <string name="phone">số điện thoại</string>
+    <string name="register_instruction">Xin vui lòng đăng ký với email và số điện thoại thật để dễ dàng lấy lại tài khoản khi quên mật khẩu.</string>
+    <!-- FORGOT PASSWORD -->
+    <string name="password_recovery">Lấy lại mật khẩu</string>
+    <string name="forgot_password_instruction">Xin vui lòng nhập email và số điện thoại mà bạn đã đăng ký, mật khẩu mới sẽ được gửi đến email của bạn. Bạn có thể dùng mật khẩu này để đăng nhập và thay đổi tại trang thông tin cá nhân.</string>
+    <string name="send_reset_password_success">Mật khẩu mới đã gửi đến email của bạn.</string>
+    <!-- HOME -->
+    <string name="tab_movie_new">PHIM MỚI</string>
+    <string name="tab_movie_single">PHIM LẺ</string>
+    <string name="tab_movie_series">PHIM BỘ</string>
+    <string name="tab_movie_ted">TED</string>
+    <string name="profile">Thông tin người dùng</string>
+    <string name="support">Hỗ trợ</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="search_hint">Tìm kiếm phim</string>
+    <string name="txt_account_expired">Tài khoản của bạn đã hết hạn, xin vui lòng gia hạn để xem phim!</string>
+	<!-- PROFILE -->
+    <string name="profile_email">Email:</string>
+	<string name="profile_phone">Số điện thoại:</string>
+	<string name="profile_expiredate">Ngày hết hạn:</string>
+	<string name="profile_changepassword">Đổi mật khẩu</string>
+	<string name="profile_extenddate">Gia hạn</string>
+	<!-- CHANGE PASSWORD -->
+	<string name="changepassword">Thay đổi mật khẩu</string>
+	<string name="changepassword_current">Mật khẩu hiện tại</string>
+	<string name="changepassword_new">Mật khẩu mới</string>
+	<string name="changepassword_confirm">Xác nhận mật khẩu mới</string>
+	<string name="changepassword_submit">Cập nhật</string>
+	<string name="changepassword_success">Thay đổi mật khẩu thành công!</string>
+	<!--  EXTEND DATE -->
+	<string name="extenddate">Gia hạn ngày dùng</string>
+	<string name="extenddate_bycard">Gia hạn bằng thẻ cào :</string>
+	<string name="extenddate_note">1000 VNĐ = 1 ngày xem phim</string>
+	<string name="extenddate_number">Mã thẻ</string>
+	<string name="extenddate_serial">Số serial</string>
+	<string name="extenddate_success">Gia hạn thành công! Ngày hết hạn: </string>
+	<!-- SUPPORT -->
+	<string name="support_detail">Thông tin chi tiết</string>
+	<string name="support_submit">Gửi</string>
+	<string name="support_success">Cám ơn bạn đã gửi thông tin, chúng tôi sẽ hỗ trợ bạn trong thời gian sớm nhất qua email.</string>
+	<!-- VIDEO -->	
+	<string name="tab_info">THÔNG TIN</string>
+    <string name="tab_episode">CÁC TẬP KHÁC</string>
+    <string name="tab_comment">BÌNH LUẬN</string> 
+    <string name="comment_hint">Bình luận (30 ký tự trở lên)</string>
+    <string name="back">Quay lại</string>
+    <string name="txt_video_error">Không thể lấy thông tin phim hoặc phim đã bị xóa. Xin vui lòng làm mới danh sách phim.</string>
+    <string name="txt_video_error2">Không thể lấy thông tin phim tại thời điểm hiện tại. Xin vui lòng quay lại sau 5 phút.</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-6778376607204977/3372141842</string>
+    <string name="video_ad_unit_id">ca-app-pub-6778376607204977/7684590242</string>
+</resources>

@@ -1,0 +1,109 @@
+<div class="container">
+    <section id="movieEditHeader">
+        <div class="buttons">
+            <a class="btn btn-default" ui-sref="^.list">Cancel</a>
+        </div>
+    </section>
+    <section class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Edit Movie</h3>
+        </div>
+        <div class="panel-body">
+            <form>
+                <div class="col-md-6">
+                    <h4>Current Movie Information:</h4>
+                    <div class="form-group">
+                        <label>Title:</label>
+                        <input type="text" class="form-control" ng-model="movie.title" />
+                    </div>
+                    <div class="form-group">
+                        <label>Category:</label>
+                        <label><input type="checkbox" name="category" ng-model="movie.category.ted" />Ted</label>
+                    </div>
+                    <div class="form-group">
+                        <label>Is Finished: <input type="checkbox" name="category" ng-model="movie.isFinished" /></label>
+                    </div>
+                    <div class="form-group">
+                        <label>Thumbnail:</label>
+                        <input type="file" ng-model="movie.newThumbnail" />
+                        <img ng-src="{{movie.thumbnail}}" width="100" height="100" />
+                    </div>
+                    <div class="form-group">
+                        <label>Description:</label>
+                        <textarea class="form-control description" ng-model="movie.description"></textarea>
+                    </div>
+                    <div class="formp-group">
+                        <button type="submit" class="btn btn-primary" ng-click="updateMovie()">Update</button>
+                    </div>
+                    <div class="form-group editVideos" style="margin-top: 20px">
+                        <label>Original Videos:</label>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>ID</th>
+                                <th>URL</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr ng-repeat="video in movie.videos">
+                                <td>{{video.index}}</td>
+                                <td>
+                                    <p>Video: {{video.url}}</p>
+                                </td>
+                                <td><button>Remove</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Grab Movie Information:</h4>
+                    <div class="form-group">
+                        <label for="url">URL:</label>
+                        <input type="text" class="form-control" id="url" ng-model="study.url" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success" ng-click="getUrlData()">Get Info</button>
+                    </div>
+                    <div class="form-group" style="margin-top: 20px">
+                        <label>Title:</label>
+                        <input type="text" class="form-control" ng-model="newMovie.title" disabled />
+                    </div>
+                    <div class="form-group">
+                        <label>Category:</label>
+                        <label><input type="checkbox" name="category" ng-model="newMovie.category.ted" disabled />Ted</label>
+                    </div>
+                    <div class="form-group">
+                        <label>Is Finished: <input type="checkbox" name="category" ng-model="newMovie.isFinished" disabled /></label>
+                    </div>
+                    <div class="form-group">
+                        <img ng-src="{{newMovie.thumbnail}}" width="100" height="100" />
+                    </div>
+                    <div class="form-group">
+                        <label>Description:</label>
+                        <textarea class="form-control description" ng-model="newMovie.description" disabled></textarea>
+                    </div>
+                    <div class="form-group editVideos">
+                        <label>New Videos:</label>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>ID</th>
+                                <th>URL</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr ng-repeat="video in newMovie.videos">
+                                <td>{{video.index}}</td>
+                                <td>
+                                    <p>Video: {{video.url}}</p>
+                                    <p>English: {{video.subtitles.english}}</p>
+                                    <p>Vietnamese: {{video.subtitles.vietnamese}}</p>
+                                </td>
+                                <td><button ng-click="updateVideo(video.index)">Update</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+
+
